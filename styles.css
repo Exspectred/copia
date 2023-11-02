@@ -410,7 +410,102 @@ to {
     visibility: hidden; /* para cambiar despues en js y poner que se vea*/
     opacity: 0; /* para cambiar despues en js y poner que se vea*/
 }
-  
+
+/* ------------------- CONTACTO STYLES ----------------- */
+
+.contactoContainer {
+    
+    position: absolute;
+    width: 80vw;
+    height: 70vh;
+    left: 4%;
+    top: 10%;
+    background: #D9D9D9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.half {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+}
+
+.secondHalf {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.contactoContainer .half .item {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.contactoContainer .half .item input {
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 90%;
+}
+
+.contactoContainer .secondHalf .item {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.contactoContainer .secondHalf .item input {
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 90%;
+}
+
+.full {
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.full textarea {
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 95%;
+    height: 200px;
+}
+
+.contactoContainer .botones input {
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+}
+
+
+/* ----------- NOSOTROS ----------- */
+
+.nosotrosContainer {
+    position: absolute;
+    width: 80vw;
+    height: 70vh;
+    left: 4%;
+    top: 10%;
+    background: #D9D9D9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
