@@ -433,7 +433,7 @@ to {
     height: 70vh;
     left: 4%;
     top: 10%;
-    background: #D9D9D9;
+    background: #161616f1;
     border-radius: 20px;
     box-shadow: 0px 0px 3px 0px #000000;
     display: flex;
@@ -458,24 +458,40 @@ to {
     height: 100%;
 }
 
-.fieldTile {
+input[type=text], textarea {
     width: 80%;
-	border: 0.1px solid #161616f1;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px 0px #000000;
-    outline: none;
-	background-color: white;
+	outline: none;
 	padding: 1rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-    font-family: Spinnaker;
+	font-size: 1.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    margin-bottom: 22px;
+    border: 0;
+    box-shadow: 0px 0px 3px 0px whitesmoke; 
+    background-color: transparent;
+    transition: 0.5
+    
 }
 
-.botonContacto {
-    width: 10%;
-    padding: 1rem 1rem;
-    box-shadow: 0px 0px 3px 0px #000000;
+input[type=submit] {
+    background-color: whitesmoke;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
+.izquierda h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+input[type=text]:hover, textarea:hover {
+    transform: scale(1.1);
+}
+
+
 
 
 /* ----------- NOSOTROS ----------- */
