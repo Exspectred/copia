@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+<figure>
+    <img src="./imagenes/Untitled-3.png" alt="casco" class="casco">
+</figure>
+
+<form action="#" class="form">
+    
+    <h1 class="text-center">Orden de Compra</h1>
+
+
+    <!---- Barra de Progreso ---->
+    <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step active" data-title="Selección"></div>
+        <div class="progress-step" data-title="Info Personal"></div>
+        <div class="progress-step" data-title="Forma de Pago"></div>
+        <div class="progress-step" data-title="Envío"></div>
+    </div>
+
+    <!---- Formularios ---->    
+    
+    <!-- Selección de GIN -->
+    <div class="form-step active"> <!-- La class active para utilizar en JS -->
+        <div class="input-group">
+            <label for="gin">Nombre del Gin</label>
+            <input type="text" name="gin" id="gin">
+        </div>
+        <div class="input-group">
+            <label for="cantidadGin">Cantidad</label>
+            <input type="text" name="cantidadGin" id="cantidadGin">
+        </div>
+        <div class="">
+            <a href="#" class="btn btn-next with-50 ml-auto">Next</a>
+        </div>
+    </div>
+    
+    <!-- Info Personal -->
+    <div class="form-step">
+        
+        <div class="input-group">
+            <label for="nombreApellido">Nombre y Apellido</label>
+            <input type="text" name="nombreApellido" id="nombreApellido">
+        </div>
+        <div class="input-group">
+            <label for="telefono">Telefono</label>
+            <input type="text" name="telefono" id="telefono">
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+        </div>
+    </div>
+    
+    <!-- Forma de PAGO -->
+    <div class="form-step">
+        <div class="input-group">
+            <label for="nombreTarjeta">Nombre en tarjeta</label>
+            <input type="text" name="nombreTarjeta" id="nombreTarjeta">
+        </div>
+        <div class="input-group">
+            <label for="numTarjeta">Numero de tarjeta</label>
+            <input type="number" name="numTarjeta" id="numTarjeta">
+        </div>
+        <div class="input-group">
+            <label for="expTarjeta">Fecha vencimiento</label>
+            <input type="text" name="expTarjeta" id="numTarjeta" placeholder="dd/mm">
+        </div>
+
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+        </div>
+    </div>
+    
+    <!-- Form de ENVÍO -->
+    <div class="form-step">
+        <div class="input-group">
+            <label for="direcEnvio">Dirección</label>
+            <input type="text" name="direcEnvio" id="direcEnvio">
+        </div>
+        <div class="input-group">
+            <label for="codPostal">Código postal</label>
+            <input type="number" name="codPostal" id="codPostal">
+        </div>
+        <div class="input-group">
+            <label for="cityEnvio">Ciudad</label>
+            <input type="text" name="cityEnvio" id="cityEnvio">
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-pre">Previous</a>
+            <input type="submit" value="Submit" class="btn">
+        </div>
+    </div>
+
+    
+</form>
+
+</body>
+</html>
