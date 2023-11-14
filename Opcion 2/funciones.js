@@ -99,9 +99,39 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     //Funcion para pasar de seccion en cotizaciones
+    const prevBtns = document.querySelectorAll('.botonAnterior'); // VARIABLE PARA SELECCIONAR LOS BOTONES DE ANTERIOR
+    const nextBtns = document.querySelectorAll('.botonSiguiente'); // VARIABLE PARA SELECCIONAR LOS BOTONES DE SIGUIENTE
+    const formSteps = document.querySelectorAll('.formEtapa'); // VARIABLE PARA SELECCIONAR MIS 4 FORMS
+
+    let formEtapaNum = 0;
     
-    
-   
+    // CLICK BOTON SIGUIENTE = formEtapaNum + 1, actualiza updateFormSteps y updateProgressbar
+    nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        formEtapaNum++;
+        updateFormSteps();
+        updateProgressbar();
+    });
+    });
+
+    // CLICK BOTON ANTERIOR = formEtapanUM - 1, actualiza updateFormSteps y updateProgressbar
+    prevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        formEtapaNum--;
+        updateFormSteps();
+        updateProgressbar();
+    });
+    });
+
+    // Remueve la class ACTIVE del form que queremos dejar y se lo aplica al actual
+    function updateFormSteps(){
+    formSteps.forEach(formStep =>{
+        formStep.classList.contains('active')&&
+            formStep.classList.remove('active')
+    });
+    formSteps[formEtapaNum].classList.add('active')
+    }
+
 });
 
 

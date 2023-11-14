@@ -1099,3 +1099,7 @@ to {
     text-decoration: none;
 }
 
+.formEtapa.active{
+    display: block;
+}
+
