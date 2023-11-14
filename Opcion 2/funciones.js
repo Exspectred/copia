@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    var buttonNext = document.getElementById("main__btn--next");
-    var buttonBack = document.getElementById("main__btn--back");
-    var containerMain = document.querySelector(".hero__main");
-    var sections = containerMain.querySelectorAll("section");
-    var btnLondon = document.getElementById("btnLondon");
-    var btnPink = document.getElementById("btnPink");
-    var btnBlanc = document.getElementById("btnBlanc");
+    const buttonNext = document.getElementById("main__btn--next");
+    const buttonBack = document.getElementById("main__btn--back");
+    const containerMain = document.querySelector(".hero__main");
+    const sections = containerMain.querySelectorAll("section");
+    const btnLondon = document.getElementById("btnLondon");
+    const btnPink = document.getElementById("btnPink");
+    const btnBlanc = document.getElementById("btnBlanc");
     
 
     
   
 
-    var currentSectionIndex = 0;
+    let currentSectionIndex = 0;
 
     // Función para mostrar la sección actual
     function showCurrentSection() {
@@ -85,9 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Funcion para abrir y cerrar cotizaciones
 
-    var cotizacionForm = document.getElementById("cotizacion");
-    var cotizacionCloseBtn = document.getElementById("cotizacionClose");
-    var cotizacionLink = document.querySelector(".nav__link[href='#cotizacion']");
+    const cotizacionForm = document.getElementById("cotizacion");
+    const cotizacionCloseBtn = document.getElementById("cotizacionClose");
+    const cotizacionLink = document.querySelector(".nav__link[href='#cotizacion']");
 
     cotizacionLink.addEventListener("click", () => {
         cotizacionForm.style.display = "block";
