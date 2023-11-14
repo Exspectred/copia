@@ -98,38 +98,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 
-    //Funcion para pasar de seccion en cotizaciones
+    // Funcion para pasar de seccion en cotizaciones
     const prevBtns = document.querySelectorAll('.botonAnterior'); // VARIABLE PARA SELECCIONAR LOS BOTONES DE ANTERIOR
     const nextBtns = document.querySelectorAll('.botonSiguiente'); // VARIABLE PARA SELECCIONAR LOS BOTONES DE SIGUIENTE
     const formSteps = document.querySelectorAll('.formEtapa'); // VARIABLE PARA SELECCIONAR MIS 4 FORMS
 
     let formEtapaNum = 0;
-    
+
     // CLICK BOTON SIGUIENTE = formEtapaNum + 1, actualiza updateFormSteps y updateProgressbar
-    nextBtns.forEach(btn => {
+    nextBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         formEtapaNum++;
-        updateFormSteps();
-        updateProgressbar();
+        updateFormSteps(formEtapaNum);
+        // Aquí deberías llamar a la función updateProgressbar() si tienes una función con ese nombre definida
+
     });
     });
 
     // CLICK BOTON ANTERIOR = formEtapanUM - 1, actualiza updateFormSteps y updateProgressbar
-    prevBtns.forEach(btn => {
+    prevBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         formEtapaNum--;
-        updateFormSteps();
-        updateProgressbar();
+        updateFormSteps(formEtapaNum);
+        // Aquí deberías llamar a la función updateProgressbar() si tienes una función con ese nombre definida
     });
     });
 
-    // Remueve la class ACTIVE del form que queremos dejar y se lo aplica al actual
-    function updateFormSteps(){
-    formSteps.forEach(formStep =>{
-        formStep.classList.contains('active')&&
-            formStep.classList.remove('active')
+    // funcion para ocultar todos los forms y luego muestra el form actual
+    function updateFormSteps(currentStep) {
+    formSteps.forEach((formStep, index) => {
+        if (index === currentStep) {
+            formStep.style.display = 'block';
+        } else {
+            formStep.style.display = 'none';
+        }
     });
-    formSteps[formEtapaNum].classList.add('active')
     }
 
 });

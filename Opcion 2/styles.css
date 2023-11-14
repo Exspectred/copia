@@ -978,11 +978,14 @@ to {
     margin-top: 1.5rem;
 }
 
+.button__container--pago{
+    display: flex;
+    flex-direction: row;
+}
 
-.botonAnterior--2,
-.botonSiguiente--3 {
+.boton--top {
     margin-top: 55%;
-    margin-left: 5.8rem;
+    margin-left: 0rem;
     
 }
 
