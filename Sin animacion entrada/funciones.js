@@ -132,6 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+
+    // funcion para los circulos barra progress
     const progressSteps = document.querySelectorAll('.progress-step');
 
     function updateProgressbar() {
