@@ -1,0 +1,1057 @@
+body, html {
+    margin: 0;
+    padding: 0%;
+    overflow-x: hidden;
+}
+
+:root{
+    --font-title: Spinnaker;
+
+    --color-main: rgba(255, 255, 255, 0.945); 
+    --color-mainb: #161616f1;
+}
+
+
+
+/*-------------------------------------BACKGROUND STYLES--------------------------*/
+
+
+
+
+
+
+
+.background__container{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(120deg, #ffffff 0%, #eef1f1 100%);
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.casco {
+    width: 25%;
+    height: 95%;
+    margin-right: 30px;
+    background-size: cover;
+
+    position: absolute; 
+    left: -13%;
+    top: -2%;
+    
+    opacity: 0.93;
+    
+}
+
+ 
+
+
+
+
+
+/*-----------------------------------NAV STYLES--------------------------*/
+
+
+
+
+
+
+
+  /* London y base*/
+.hero__container{ 
+    height: 85vh;
+    width: 88%;
+    box-shadow: 5px 5px 45px 15px rgba(63, 62, 62, 0.233);
+    justify-items: center;
+    border-radius: 20px;
+    position: relative;
+    opacity: 1; 
+    animation: aparecer 1s linear forwards; 
+    animation-delay: 1.5s;
+}
+
+
+.hero__nav{
+
+    position: fixed;
+    width: 88%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    z-index: 1;           /*para que quede por encima del menu*/
+
+}
+
+.nav__logo{
+    margin-left: -0.2rem;
+    margin-top: 0.4rem;
+    width: 5rem;
+    height: 110%;
+}
+
+.logo__img{
+    width: 6rem;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+.nav__links{
+    display: flex;
+    gap: 1rem;
+    width: 25rem;
+    margin-right: 3.2rem;
+    margin-top: 1.2rem;
+    justify-content: space-between;
+    align-content: center;
+    list-style: none;
+    
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--color-main);
+    padding: 1rem;
+    border-radius: 10px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+
+    transition: all 300ms ease-in-out;
+    position: relative; /*para ubicar la barra del efecto */
+}
+
+
+.nav__link::before{ /*para crear el elemento de la barra que va a aparecer cuando paso*/
+    content: "";
+    height: 0.12rem;
+    width: 0;
+    background-color: #F0E6E6;
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0.9rem;
+    opacity: 0;
+    transition: 500ms;
+  }
+  
+  .nav__link:hover::before{/*aca hago que crezca la barra que cree antes en before*/
+    width: 75%;
+    background-position: center;
+    opacity: 1;
+  }
+
+
+
+
+
+
+
+  /*---------------------------------STYLES MENU-------------------------------*/
+
+
+
+
+
+
+.hero__main{
+    position: absolute;
+    height: 85vh;
+    width: 100%;
+    justify-items: center;
+    
+    
+}
+
+.main__london,
+.main__pink,
+.main__blanc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 100%; 
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    transition: all 3s ease-in-out;
+}
+
+
+.main__london{
+    background: linear-gradient(to right, var(--color-main) 50%, #161616f1 50%);
+    padding: 20px;
+    
+}
+
+.section__left{
+    width: 29.59288rem;
+    height: 14.38856rem;
+    
+}
+
+.main__tittle{
+    position: absolute;
+    top: 5%;
+    color: #222020;
+    font-family: var(--font-title);
+    font-size: 7.025rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.main__tittle--effect{
+    animation: entrytittle 500ms ease 1 normal forwards;
+    
+}
+
+@keyframes entrytittle {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.main__img{
+    width: 10.1875rem;
+    height: 31.8125rem;
+
+    position: absolute;
+    top: -5%;
+    left: 43%; 
+    flex-shrink: 0;
+    z-index: 3;
+    scale: 1;
+ 
+    transition: all 500ms ease-in;
+
+}
+
+.main__img--effect{
+    animation: entryimg 500ms ease 1 normal forwards;
+    
+    
+}
+
+@keyframes entryimg {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.main__img:hover{
+    transform: scale(1.03);
+    top: -6%;
+    
+}
+
+
+.main__img--reflect{
+    width: 11.1875rem;
+    height: 5.8125rem;
+    
+    position: absolute;
+    top: 82%;
+    left: 42%; 
+    
+    z-index: 2;
+    
+}
+
+.main__img--reflect--effect{
+    animation: entryreflect 500ms ease 1 normal forwards;
+    opacity: 0;
+    
+}
+
+@keyframes entryreflect {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.main__btn--back{
+    background-image: url(./imagenes/flecha-negra.png);
+    position: absolute;
+    top: 45%;
+    left: 38%;
+    z-index: 2;
+}
+
+.main__btn--next{
+    background-image: url(./imagenes/flecha-blanca.png);
+    background-size: contain;
+    position: absolute;
+    top: 45%;
+    left: 58%;
+    z-index: 2;
+    
+}
+
+.main__btn{
+    width: 30px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    scale: 1;
+    animation: entryarrow 2s ease 1 normal forwards;
+    opacity: 0;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    animation: entryarrow 500 ms ease 1 normal forwards;
+    opacity: 0;
+    
+}
+
+@keyframes entryarrow {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.main__btn:hover{
+    transform: scale(1.1);
+    
+}
+
+.description__paragraph{
+    width: 24.4375rem;
+    height: 20.71544rem;
+    color: #faf3f3;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1.4rem;
+
+    position: absolute;
+    top: 25%;
+    left: 62%;
+    
+    
+  }
+
+  .description__paragraph--effect{
+    animation: entrytext 500ms ease  1 normal forwards;
+    
+  }
+
+  @keyframes entrytext {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+ /* .main__btn{
+    border-radius: 13%;
+    border: 1px solid #161616f1;
+    background-color: #161616f1;
+    color: #faf3f3;
+    padding: 0.7rem;
+    box-shadow: 5px 5px 10px 1px rgba(29, 28, 28, 0.815);
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9rem;
+
+    position: absolute;
+    left: 62%;
+    top: 80%;
+
+  }
+
+  .main__btn:active{
+    border: 1px solid rgba(253, 245, 245, 0.945);
+    background-color: rgba(252, 243, 243, 0.945);
+    color: #0c0c0c;
+  }*/
+
+
+   /*PINK*/ 
+
+.main__pink{ 
+    background: linear-gradient(to right, var(--color-main) 50%, #5c0606e1 50%);
+    
+   
+}
+ 
+.main__img--reflect--pink{
+    position: absolute;
+    left: 42.8%;
+    top: 87%;
+}
+
+.main__tittle--pink{  
+    color: #5c0606e1;
+
+}
+
+    /*BLANC*/
+
+     
+.main__img--reflect--blanc{
+    width: 10.3rem;
+    position: absolute;
+    left: 42.8%;
+    top: 87%;
+}
+    
+.main__tittle--blanc{
+    color: #525455;
+    font-size: 5.825rem;
+    top: 9%;
+   
+ }
+
+.main__blanc{ 
+    background: linear-gradient(to right, var(--color-main) 50%, #666869 50%);
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.detener-animaciones {
+    animation: none !important;
+}
+
+/* --------------------------------------------- CONTACTO STYLES -------------------------------------------------- */
+
+.contactoContainer {
+    
+    position: relative;
+    width: 44vw;
+    height: 85vh;
+    left: 50%;
+    top: 0.2%;
+
+    background: rgba(255, 255, 255, 0.973);
+    border-radius: 0px 20px 20px 0px;
+    
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 1;
+    
+}
+
+
+.contact__btn{
+
+    background-image: url(./imagenes/icons8-close-50.png);
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.contact__btn:hover{
+    width: 22px;
+    height: 22px;
+}
+
+.izquierda__header{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    padding: 0.1rem 0.8rem 0.1rem 9rem;
+    left: 1%;
+    top: 1%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+
+.header__tittle{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.inputs__container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0.1rem;
+    width: 70%;
+    align-content: center;
+    justify-content: center;
+    top: 27%;
+    left: 24.5%;
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 51.2%;
+    height: 100%;
+    color: var(--color-main);
+}
+
+.fieldTile {
+    width: 80%;
+	border: 0.1px solid var(--color-mainb);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #000000ce;
+    outline: none;
+	background-color: var(--color-main);
+	padding: 0.3rem 1rem;
+	margin-bottom: 22px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+}
+
+.fieldTileMss{
+    padding: 2rem 1rem;
+    align-content: start;
+    text-align: start;
+}
+
+.botonContacto {
+
+    border: 0.1px solid var(--color-mainb);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #000000ce;
+    outline: none;
+	background-color: var(--color-mainb);
+    width: 20%;
+    padding: 0.5rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-main);
+}
+
+.botonContacto:active{
+    padding: 0.6rem;
+    width: 21%;
+}
+
+.contactForm{
+    display: none;
+}
+
+
+
+/* ---------------------------------- NOSOTROS -------------------------------------- */
+
+.nosotros__paragraph{
+
+    width: 70%;
+    height: auto;
+    color: #000000;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 570;
+    line-height: 1.35rem;
+
+    
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+
+    position: absolute;
+    top: 14%;
+    left: 19.3%;
+}
+
+.header__tittle--nosotros{
+    padding-left: 8.5rem;
+}
+
+.nosotrosForm{
+    display: none;
+    opacity: 1;
+    transition: all 5s ease-in-out;
+}
+
+
+.contact__btn,
+.nosotros__btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__btn:hover,
+.nosotros__btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/*-------------------------------Cotizaciones-----------------------------*/
+
+
+
+/*SELECCION DE PRODUCTOS*/
+
+
+.container__items{
+    position: relative;
+    width: 30vw;
+    height: 57vh;
+    left: 34%;
+    margin-top: 12rem;
+
+    color: #000000;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 570;
+    line-height: 1rem;
+    
+}
+
+.header__tittle--cotizacion{
+    
+    margin-left: 17rem;
+}
+
+/*PROGRES BAR*/
+
+.progressbar {
+    position: absolute;
+    top: 10%;
+    left:20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem 4rem 1rem;
+    counter-reset: step;
+    width: 70%;
+    height: 10%;
+    color: #fff;
+}
+
+.progressbar::before, .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #0f0f0f;
+}
+.progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-main);
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+.progress-step {
+    width: 35px;
+    height: 35px;
+    background-color: #c0b5b5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+.progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: .80rem;
+    color: #666666;
+}
+.progress-step.active {
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px 2px rgba(3, 3, 3, 0.877);;
+    background-color: rgb(7, 7, 7);
+    color: #f3f3f3;
+}
+
+
+/*------------*/
+
+
+.container__products{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+    box-sizing: border-box;
+}
+
+.left__tittle{
+    font-weight: 500;
+}
+
+
+.contador{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+
+    gap: 1rem;
+}
+
+.contador--cant{
+    border: 0.1px solid #000000c9;
+    border-radius: 10%;
+    width: 43%;
+    box-shadow: 0px 0px 3px 0px #000000ce;
+	background-color: var(--color-main);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 570;
+    text-align: center;
+}
+
+.contador__btn{
+    border: none;
+    border-radius: 50%;
+    
+    outline: none;
+	background-color: #141313e8; 
+    width: 20%;
+    padding: 0.1rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 570;
+    color: var(--color-main);
+    text-align: center;
+}
+  
+
+.botonSiguiente{
+    margin-left: 0%;
+    margin-top: 8%;
+}
+
+
+/*ENVIO*/
+
+
+
+.cotizacion__envio,
+.cotizacion__infopersonal{
+    position: absolute;
+    width: 30vw;
+    height: 57vh;
+    left: 23.3%;
+    margin-top: 10rem;
+
+    color: #000000;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 570;
+    line-height: 1rem;
+
+    box-sizing: border-box;
+
+}
+
+.inputs__container--envio{
+  margin-left: 0%;
+  width: 69%;
+  gap: 1.5rem;
+  margin-top: 10%;
+}
+
+.botonAnterior,
+.botonSiguiente--2{
+    margin-top: 5%;
+    margin-right: 5.8rem;
+}
+
+
+
+/*INFO-PERSONAL*/
+
+.cotizacion__infopersonal{
+    left: 23%;
+}
+
+.inputs__container--info{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    margin-top: 2rem;
+}
+
+.botonSiguiente--4,
+.botonAnterior--3{
+    width: 20.5%;
+    margin-top: 2.8rem;
+}
+
+.botonAnterior--3{
+    margin-right: 5.5rem;
+}
+
+
+/*PAGO*/
+
+.cotizacion__pago{
+    position: absolute;
+    width: 30vw;
+    height: 57vh;
+    left: 23.3%;
+    margin-top: 10rem;
+
+    color: #000000;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 570;
+    line-height: 1rem;
+
+    box-sizing: border-box;
+
+    
+}
+
+.inputs__container--pago{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 23%;
+    
+}
+
+.input__pago {
+    display: none;
+  }
+  
+.input__pago + label {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    
+  }
+  
+  /* Estilo para el círculo de selección */
+  .input__pago + label:before {
+    content: "";
+    position: absolute;
+    left: -52%;
+    top: 10%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #151616; 
+    background-color: white; 
+    transition: background-color 0.3s, border-color 0.3s; 
+  }
+
+
+    /* Estilo para cambiar el color del círculo cuando está seleccionado */
+.input__pago:checked + label:before {
+    background-color: #151616;
+    border-color: #151616; /
+}
+
+.label__text{
+
+    color: #000000;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0.9rem;
+
+    margin-left: 2rem;
+   
+}
+
+.label__text--1{
+    margin-top: 1.5rem;
+}
+
+.button__container--pago{
+    display: flex;
+    flex-direction: row;
+}
+
+.boton--top {
+    margin-top: 55%;
+    margin-left: 0rem;
+    
+}
+
+
+
+.cotizacion__pago{
+    display: none;  /* PARA CAMBIAR EN JS */
+}
+
+.cotizacion__envio{
+    display: none;  /* PARA CAMBIAR EN JS */
+}
+
+.cotizacion__infopersonal{
+    display: none;  /* PARA CAMBIAR EN JS */
+}
+
+.cotizacionForm{
+    display: none;  /* PARA CAMBIAR EN JS */
+}
+
+
+/*-----------------------Aside-------------------------------------*/
+
+
+
+
+
+
+
+.aside__container{
+    
+    width: 11.1875rem;
+    height: 1.1rem;
+    padding: 0.2rem;
+    gap: 2rem;
+
+    display: flex;
+    justify-content: center;
+    
+    position: absolute;
+    top: 94%;
+    left: 42.2%;
+
+    z-index: 4;
+
+}
+
+.aside__btn{
+    border-radius: 50%;
+    border: none;
+    background-color: #8a7f7fea;
+    padding: 0.65rem;
+    box-shadow: 5px 5px 10px 1px rgba(63, 62, 62, 0.5);
+
+    
+}
+
+.btn--london--selected{
+    background-color: #474444;
+}
+
+.selected {
+    /* Estilos para el botón seleccionado, por ejemplo, un color de fondo más oscuro */
+    background-color: #474444;
+    color: #fff;
+    padding: 0.75rem;
+    /* Otros estilos que desees aplicar al botón seleccionado */
+}
+
+.detener__animaciones {
+    animation: none !important;
+}
+
+
+
+
+
+/*---------------------------------------FOOTER--------------------------------------------*/
+
+
+.footer__container{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 103%;
+}
+
+.footer__left,
+.footer__right{
+    display: flex;
+    align-items: center;
+}
+
+.footer__img{
+    width: 18px;
+    height: 18px;
+}
+
+.footer__link--2{
+    margin-left: 0.5rem;
+}
+
+.footer__link{
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4rem;
+
+    color: var(--color-mainb);
+    text-decoration: none;
+}
+
+.formEtapa.active{
+    display: block;
+}
+

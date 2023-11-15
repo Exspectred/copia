@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Aquiles Gin</title>
+
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300&display=swap" rel="stylesheet">
+
+  <script src="./funciones.js" defer></script>
+</head>
+
+
+<body>
+
+  <div class="background__container">
+
+
+    <figure class="background__pictures">
+
+      <img src="./imagenes/Untitled-3.png" alt="casco" class="casco">
+
+
+    </figure>
+
+
+
+
+
+    <div class="hero__container">
+
+      <header class="header">
+
+        <nav class="hero__nav">
+
+          <figure class="nav__logo">
+            <img src="./imagenes/logo-fotor-bg-remover-20231020162558.png" alt="" class="logo__img">
+          </figure>
+  
+          <ul class="nav__links">
+            <li><a href="#contact" class="nav__link">Contacto</a></li>
+            <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+            <li><a href="#cotizacion" class="nav__link">Cotizaciones</a></li>
+          </ul>
+  
+        </nav>
+
+      </header>
+      
+
+      <main class="hero__main">
+
+
+
+        <section class="main__london" id="seccion1">
+
+
+          <h2 class="main__tittle main__tittle--effect">LONDON <br> DRY</h2>
+
+
+          <figure class="main__pictures">
+
+
+            <img src="./imagenes/Untitled-5.png" alt="" class="main__img main__img--effect">
+            <img src="./imagenes/Reflection of london-removebg-preview 1 (1).png" alt=""
+              class="main__img--reflect main__img--reflect--effect">
+          </figure>
+
+
+          <p class="description__paragraph description__paragraph--effect"> <em><b> Aquiles London Dry </b> </em> es un
+            gin derivado de alcohol de cereales. Destilado en alambique de cobre, donde en la última etapa se le agregan
+            botánicos y se produce la extracción de los aromas y aceites esenciales por arrastre de vapor. <br>
+            <br>
+
+            Dentro de sus aromas se destacan el cardamomo y las notas cítricas, en boca se aprecia una marcada y
+            equilibrada presencia de enebro, cardamomo y cítricos por sobre los demás botánicos que lo componen, entre
+            ellos: angélica raíz, coriandro y yerba mate.
+          </p>
+
+          <!--<button class="main__btn" type="button">Comprar</button>-->
+
+
+        </section>
+
+        <section class="main__pink hidden" id="seccion2">
+
+
+          <h2 class="main__tittle main__tittle--pink main__tittle--effect">PINK <br> HIBISCUS</h2>
+
+
+          <figure class="main__pictures">
+
+
+            <img src="./imagenes/Untitled-2.png" alt="" class="main__img main__img--effect">
+            <img src="./imagenes/Reflection of Untitled-2 1.png" alt=""
+              class="main__img--reflect main__img--reflect--pink main__img--reflect--effect">
+          </figure>
+
+
+          <p class="description__paragraph description__paragraph--effect"> <em><b> Aquiles Pink Hibiscus </b> </em> es un Gin derivado de alcohol de
+            cereales. Destilado en alambique de cobre, donde en la última etapa se le agregan los botánicos y se produce
+            la extracción de los aromas y aceites esenciales por arrastre de vapor. <br>
+            <br>
+
+            Dentro de sus aromas se destacan las notas cítricas, florales y afrutadas, en boca se aprecia una marcada y
+            equilibrada presencia de enebro, cardamomo, cítricos e hibiscus, donde este último le da un sabor algo
+            dulzón. Su color característico se obtiene mediante un proceso de infusión natural.
+          </p>
+
+          <!--<button class="main__btn" type="button">Comprar</button>-->
+
+
+
+        </section>
+
+
+        <section class="main__blanc hidden" id="seccion3">
+
+
+          <h2 class="main__tittle main__tittle--blanc main__tittle--effect">SUAVIGNON <br> BLANC</h2>
+
+
+          <figure class="main__pictures">
+
+            <img src="./imagenes/Untitled-6.png" alt="" class="main__img main__img--effect">
+            <img src="./imagenes/Reflection of Untitled-6 1.png" alt=""
+              class="main__img--reflect main__img--reflect--pink main__img--reflect--blanc main__img--reflect--effect">
+          </figure>
+
+
+          <p class="description__paragraph description__paragraph--effect"> <em><b> Aquiles Sauvignon Blanc </b> </em> es un Gin suave y elegante,
+            derivado de alcohol de cereales y sauvignon. Destilado en alambique de cobre, donde en la última etapa se le
+            agregan los botánicos y se produce la extracción de los aromas y aceites esenciales por arrastre de vapor.
+            <br>
+            <br>
+
+            Dentro de sus aromas se destacan las notas cítricas, florales y frutales. En boca se aprecia una marcada y
+            equilibrada presencia de enebro, uva sauvignon blanc, cítricos y un blend de flores.
+          </p>
+
+          <!--<button class="main__btn" type="button">Comprar</button>-->
+
+
+        </section>
+
+      
+      </main>
+
+      <section class="hero__forms">
+
+        
+        <!----- CONTACTO FORM ----->
+        <form class="contactForm" id="contact">
+
+          <div class="contactoContainer">
+
+            <div class="izquierda__header">
+              <h2 class="header__tittle">Contacto</h2>
+              <button class="contact__btn" id="contactClose"></button>
+            </div>
+
+            <div class="inputs__container">
+
+              <input type="text" placeholder="Nombre" class="fieldTile" name="nombre" autocomplete="name">
+              <input type="text" placeholder="Email" class="fieldTile" name="email" autocomplete="email">
+              <input type="text" placeholder="Telefono" class="fieldTile" name="telefono" autocomplete="phone">
+              <textarea placeholder="Mensaje" class="fieldTile fieldTileMss" name="mensaje"
+                autocomplete="message"></textarea>
+              <button class="botonContacto" id="enviarContacto">Enviar</button>
+
+            </div>
+
+          </div>
+
+        </form>
+
+        <!----- NOSOTROS PAGE ----->
+        <form class="nosotrosForm" id="nosotros">
+
+          <div class="contactoContainer nosotrosContainer">
+
+            <div class="izquierda__header">
+              <h2 class="header__tittle header__tittle--nosotros">Nosotros</h2>
+              <button class="contact__btn" id="nosotrosClose"></button>
+            </div>
+
+            <div class="inputs__containers">
+
+              <p class="nosotros__paragraph">
+
+                Somos Candela y Alan, dos jóvenes rosarinos profesionales, que soñamos con desarrollar
+                un producto único, innovador y distintivo. Así, a principios del 2020 nació Aquiles,un gin guerrero, una
+                bebida con historia. <br><br>Rápidamente, logramos un posicionamiento en el mercado, siempre apostando a
+                alcanzar la máxima calidad en cada uno de nuestros productos.Actualmente producimos tres variedades:
+                London Dry, Pink Hibiscus y Sauvignon Blanc.
+                <br><br>Hoy contamos con dos sedes, una en la ciudad de Cañada de Gómez y otra en Rosario,
+                y esta familia continúa creciendo. Seguimos escribiendo la historia de este gin guerrero
+                que tanto nos apasiona.
+
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </form>
+        
+        <!----- COTIZACION FORM ----->
+        <form class="cotizacionForm" id="cotizacion">
+
+          <div class="contactoContainer cotizacionContainer" >
+      
+            <section class="cotizacion__products active">
+      
+                <div class="izquierda__header">
+                  <h2 class="header__tittle header__tittle--cotizacion">Cotizaciones</h2>
+                  <button class="contact__btn" id="cotizacionClose"></button>
+                </div>
+                
+                <div class="progressbar">
+              
+                  <div class="progress" id="progress">
+                    <div class="progress-step active" ></div>
+                    <div class="progress-step" ></div>
+                    <div class="progress-step" ></div>
+                    <div class="progress-step" ></div>
+                  </div>
+                  
+                </div>
+                  
+                <div class="container__items formEtapa">
+      
+                  <h2 class="cotizacion__title">Seleccion de Productos</h2>
+      
+                  <div class="container__products">
+      
+                    <h2 class="left__tittle">London Dry</h2>
+            
+                    <div class="contador">
+            
+                      
+                      <input type="number" class="contador--cant" id="contador1" value="0" min="0">
+                      
+            
+                    </div>
+            
+                  </div>
+            
+                  <div class="container__products">
+            
+                    <h2 class="left__tittle">Pink Hibiscus</h2>
+            
+                    <div class="contador">
+                              
+                      
+                      <input type="number" class="contador--cant" id="contador2" value="0" min="0">
+                      
+      
+                    </div>
+            
+                  </div>
+            
+                  <div class="container__products">
+            
+                    <h2 class="left__tittle">Suavignon Blanc</h2>
+            
+                    <div class="contador">
+            
+                      
+                      <input type="number" class="contador--cant" id="contador3" value="0" min="0">
+                      
+      
+                    </div>
+      
+                  </div>
+
+                  <button class="botonContacto botonSiguiente">Siguiente</button>
+
+                </div>
+      
+            </section>
+              
+            <section class="cotizacion__envio formEtapa">
+      
+                  <h2 class="cotizacion__title">Direccion de envio</h2>
+      
+                  <div class="inputs__container--envio">
+      
+                      <input type="text" placeholder="provincia" class="fieldTile" name="provincia" autocomplete="provincia">
+                      <input type="text" placeholder="ciudad" class="fieldTile" name="ciudad" autocomplete="ciudad">
+                      <input type="text" placeholder="direccion" class="fieldTile" name="direccion" autocomplete="provincia">
+      
+                  </div>
+                      
+                  <div class="button__container">
+                      <button class="botonContacto botonAnterior">Anterior</button>
+                      <button class="botonContacto botonSiguiente">Siguiente</button>
+                  </div>
+      
+            </section>
+              
+            <section class="cotizacion__infopersonal formEtapa">
+
+                <h2 class="pago__title">Datos Personales</h2>
+
+                <div class="inputs__container--info">
+
+                  <input type="text" placeholder="Nombre" class="fieldTile" name="nombre" autocomplete="name" id="nombreCot">
+                  <input type="text" placeholder="Email" class="fieldTile" name="email" autocomplete="email">
+                  <input type="text" placeholder="Telefono" class="fieldTile" name="telefono" autocomplete="phone">
+
+                  <div class="button__container">
+                    <button class="botonContacto botonAnterior">Anterior</button>
+                    <button class="botonContacto botonSiguiente">Siguiente</button>
+                  </div>
+                     
+                </div>
+
+            </section>
+                
+            <section class="cotizacion__pago formEtapa">
+      
+                <h2 class="pago__title">Metodo de Pago</h2>
+        
+                <div class="inputs__container--pago">
+        
+                  <input type="radio" id="opcion1" name="opciones" value="opcion1" class="input__pago">
+                  <label for="opcion1" class="label__text label__text--1">Transferencia</label>
+
+                  <input type="radio" id="opcion2" name="opciones" value="opcion2" class="input__pago">
+                  <label for="opcion2" class="label__text">Tarjeta de credito hasta 3 cuotas</label>
+
+                  <input type="radio" id="opcion3" name="opciones" value="opcion3" class="input__pago">
+                  <label for="opcion3" class="label__text">Tarjeta de debito</label>
+        
+                </div>
+                        
+                <div class="button__container--pago">
+                  <button class="botonContacto botonAnterior boton--top">Anterior</button>
+                  <button class="botonContacto botonSiguiente boton--top boton--final" id="enviarBtn">Enviar</button>
+                </div>
+      
+            </section>
+            
+          </div>
+      
+        </form>
+
+      </section>
+
+      <section class="hero__footernav">
+
+        <button class=" main__btn main__btn--back" id="main__btn--back">
+
+        </button>
+
+        <button class="main__btn main__btn--next" id="main__btn--next">
+
+        </button>
+
+        <div class="aside__container">
+          <button id="btnLondon" class="aside__btn btn--london selected" type="button"></button>
+          <button id="btnPink" class="aside__btn btn--pink" type="button"></button>
+          <button id="btnBlanc" class="aside__btn btn--blanc" type="button"></button>
+        </div>
+      </section>
+
+      <footer clas="hero__footer">
+        <div class="footer__container">
+
+          <div class="footer__left">
+           <img src="./imagenes/instagram-logo-24.png" alt="" class="footer__img">
+           <a href="#" class="footer__link">Aquilesgin</a>
+          </div>
+          
+
+          <div class="footer__right">
+            <img src="./imagenes/copyright-regular-24.png" alt="" class="footer__img">
+            <a href="#" class="footer__link footer__link--2">Julian Benito</a>
+            <a href="#" class="footer__link footer__link--2">Federico Coronel</a>
+          </div>
+          
+
+        </div>
+        
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
