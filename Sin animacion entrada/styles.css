@@ -760,22 +760,6 @@ body, html {
     font-weight: 570;
     text-align: center;
 }
-
-.contador__btn{
-    border: none;
-    border-radius: 50%;
-    
-    outline: none;
-	background-color: #141313e8; 
-    width: 20%;
-    padding: 0.1rem;
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: 570;
-    color: var(--color-main);
-    text-align: center;
-}
   
 
 .botonSiguiente{
@@ -939,7 +923,6 @@ body, html {
 }
 
 
-
 .cotizacion__pago{
     display: none;  /* PARA CAMBIAR EN JS */
 }
@@ -998,17 +981,12 @@ body, html {
 }
 
 .selected {
-    /* Estilos para el botón seleccionado, por ejemplo, un color de fondo más oscuro */
+    /* Estilos para el botón seleccionado*/
     background-color: #474444;
     color: #fff;
     padding: 0.75rem;
-    /* Otros estilos que desees aplicar al botón seleccionado */
+    
 }
-
-.detener__animaciones {
-    animation: none !important;
-}
-
 
 
 
