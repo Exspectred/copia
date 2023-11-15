@@ -64,10 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const enviarContactoBtn = document.getElementById("enviarContacto");
 
     enviarContactoBtn.addEventListener("click", () => {
-        // Mensaje a mostrar en el alert
-        const mensaje = "¡Gracias por contactarte con nosotros! En breve te estaremos respondiendo.";
+        // Mensaje a mostrar al enviar
+        const mensaje = "¡Gracias por contactarte con nosotros! En breve nos estaremos comunicando.";
 
-        // Mostrar el mensaje en el alert
         alert(mensaje);
     });
 
@@ -152,10 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
     enviarBtn.addEventListener("click", () => {
         alert("¡Muchas gracias por contactarte con nosotros! En breve estaremos respondiendo a tu consulta.");
 
-        // Resetear el formulario
+        // Reiniciar el formulario
         cotizacionForm.reset();
 
-        // Opcional: Puedes reiniciar también el contador de pasos y la barra de progreso
+        // Reiniciar el contador de pasos y la barra de progreso
         formEtapaNum = 0;
         updateFormSteps(formEtapaNum);
         updateProgressbar(formEtapaNum);
