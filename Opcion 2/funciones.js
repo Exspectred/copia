@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener('click', () => {
         formEtapaNum++;
         updateFormSteps(formEtapaNum);
+        updateProgressbar(formEtapaNum);
         // Aquí deberías llamar a la función updateProgressbar() si tienes una función con ese nombre definida
 
     });
@@ -120,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener('click', () => {
         formEtapaNum--;
         updateFormSteps(formEtapaNum);
+        updateProgressbar(formEtapaNum);
         // Aquí deberías llamar a la función updateProgressbar() si tienes una función con ese nombre definida
     });
     });
@@ -134,6 +136,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     }
+
+    const progressSteps = document.querySelectorAll('.progress-step'); // VARIABLE PARA SELECCIONAR MIS 4 CIRCULOS DEL FORM
+
+    function updateProgressbar() {
+        progressSteps.forEach((progressStep, index) => {
+            if (index < formEtapaNum + 1) {
+                progressStep.classList.add("active");
+            } else {
+                progressStep.classList.remove("active");
+            }
+        });
+    } 
 
 });
 
